@@ -1,33 +1,22 @@
-let listStyles = [
-    {
-        'background': 'red',
-        'color': 'white',
-        'width': '35',
-    },
-    {
-        'background': 'yellow',
-        'color': 'black',
-        'width': '25',
-    },
-    {
-        'background': 'green',
-        'color': 'white',
-        'width': '50',
-    },
-    {
-        'background': 'black',
-        'color': 'white',
-        'width': '10',
-    },
-    {
-        'background': 'orange',
-        'color': 'white',
-        'width': '10',
-    },
-];
+svg = d3.select('body')
+    .append('svg')
+    .attr('width', 400)
+    .attr('height', 400)
+    .style('background', '#999')
 
-let li = d3.select('body').selectAll('.items li')
-    .data(listStyles)
-    .style('background', d => d.background)
-    .style('color', d => d.color)
-    .style('width', d => d.width + '%')
+svg.append('rect')
+    .attr('width', 300)
+    .attr('height', 300)
+    .attr('x', 50)
+    .attr('y', 50)
+    .style('fill', 'red')
+    .style('stroke', 'black')
+    .style('stroke-width', '3')
+
+svg.append('circle')
+    .attr('cx', 200)
+    .attr('cy', 200)
+    .attr('r', 100)
+    .style('fill', 'yellow')
+    .style('stroke', 'black')
+    .style('stroke-width', 3)
