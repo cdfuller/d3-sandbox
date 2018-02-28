@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Hello D3</title>
+<script src="d3/d3.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css" />
+<style>
+
+.legend {
+    font-size: 12px;
+}
+
+rect {
+    stroke-width: 2;
+    cursor: pointer;
+}
+
+rect.disabled {
+    fill: transparent !important;
+}
+
+#chart {
+    height: 360px;
+    position: relative;
+    width: 360px;
+    margin: 0 auto;
+}
+
+.tooltip {
+    background: #eee;
+    box-shadow: 0 0 5px #999;
+    color: #333;
+    display: none;
+    font-size: 12px;
+    left: 130px;
+    padding: 10px;
+    position: absolute;
+    text-align: center;
+    top: 95px;
+    width: 80px;
+    z-index: 10;
+}
+
+h1 {
+    font-size: 14px;
+    text-align: center;
+}
+
+</style>
+</head>
+<body>
+
+<h1>Toronto Parking Tickets by Weekday in 2012</h1>
+
+<div id="chart"></div>
+
+<script src="script.js"></script>
+<script>
+    update();
+</script>
+</body>
+</html>
